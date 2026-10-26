@@ -19,14 +19,22 @@
 
 <h2>What leaves your phone, only if you turn it on</h2>
 <div class="card">
-<p><strong>Gmail.</strong> The app signs in to your own mailbox over IMAP with an app password you create. The password is stored encrypted on your phone and used only to read bank alerts.</p>
+<p><strong>Gmail.</strong> If you choose <em>Sign in with Google</em>, Leakly asks Google for read-only access to your Gmail (<code>gmail.readonly</code>). It searches only for emails from bank and card senders and reads those messages on your phone to extract the amount, date, merchant and account. It keeps the resulting transactions, and the alert's text for 30 days as described above, in the app's encrypted storage. It never sends, changes, deletes or labels email, and email content is never sent to the developer or any server. Google sign-in is handled by Google Play services; the app never sees your Google password and keeps no long-lived token. You can remove access in the app (Settings → Gmail alerts → Disconnect) or at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</p>
+<p>As an advanced alternative you can instead give the app a Gmail app password; it is stored encrypted on your phone and used only to read bank alerts over IMAP.</p>
 <p><strong>Google Drive backup.</strong> Backups are encrypted on your phone with a passphrase you choose, and then uploaded to a "Leakly backups" folder in your own Google Drive. Without the passphrase they can't be read, by Google or anyone else; if you forget it, they can't be restored. The app uses the <code>drive.file</code> permission, so it can see and change only the files it created, not the rest of your Drive. Google sign-in is handled by Google Play services; the app never sees your Google password.</p>
 <p><strong>Google Sheet.</strong> If you set it up, transactions are sent to a Google Sheet and script that you own.</p>
 <p><strong>Fund prices.</strong> Mutual fund and NPS prices are downloaded from public sources (AMFI and npsnav.in). None of your data is sent with these requests.</p>
 </div>
 
 <h2>Use of Google user data</h2>
-<p>Leakly's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. Drive access is used only to store and restore your own backups, and is not shared, sold or used for any other purpose.</p>
+<p>Leakly's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically:</p>
+<ul>
+<li>Gmail data is used only to show you your own transactions, budgets and bills inside the app.</li>
+<li>Drive access is used only to store and restore your own encrypted backups.</li>
+<li>Google user data is not transferred to anyone, except to your own Google Drive and Google Sheet when you turn those features on.</li>
+<li>Google user data is not used for advertising, is not sold, and is not used to train AI or machine-learning models.</li>
+<li>No person reads your Google user data, unless you send it yourself (for example with "Report this format") or the law requires it.</li>
+</ul>
 
 <h2>Sharing</h2>
 <p>Leakly does not sell or share your data. Crash reports are processed by Google (Firebase) on the developer's behalf. When you choose "Report this format" or "Send feedback", the app opens your phone's share sheet with the text (account numbers and references blanked out, plus your app version, phone model, Android version and report ID so the problem can be looked into); you decide whether and to whom to send it.</p>
