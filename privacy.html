@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head>
 <body>
-<header><h1>Privacy policy</h1><p>Leakly: AIO Budgeting Solution · effective 26 October 2026</p></header>
+<header><h1>Privacy policy</h1><p>Leakly: AIO Budgeting Solution · effective 27 October 2026</p></header>
 <main>
 <p>Leakly is an Android app made by AdRaw App Studio. This policy explains what the app reads, where that data is kept, and what leaves your phone.</p>
 
@@ -12,7 +12,7 @@
 <p>With your permission, Leakly reads SMS messages on your phone, and (only if you connect Gmail) emails in your own mailbox, to find alerts from banks and businesses that mention an amount. Personal messages are skipped. One-time-password messages are never stored.</p>
 
 <h2>Where your data is kept</h2>
-<p>Transactions, budgets, bills, accounts and settings are stored in the app's private storage on your phone. Your transactions and messages are never sent to the developer or anyone else. Leakly has no server, no user accounts, no analytics and no advertising.</p>
+<p>Transactions, budgets, bills, accounts and settings are stored in the app's private storage on your phone, in an encrypted database. Its key is created on your phone and protected by Android's hardware-backed Keystore, so it never leaves the phone. The text of each bank alert is kept for 30 days, so it can be re-read or reported, and then deleted; the transaction it produced stays. Your transactions and messages are never sent to the developer or anyone else. Leakly has no server, no user accounts, no analytics and no advertising.</p>
 
 <h2>Crash reports</h2>
 <p>If the app crashes, a crash report is sent to the developer through Firebase Crashlytics, a Google service. It contains the error and where in the app it happened, the last few screens you opened, your phone model, Android version, app version, a random report ID created by the app, and identifiers Firebase assigns to the installation. It never contains your transactions, messages, account numbers, contacts or your name. Google keeps crash reports for 90 days. You can turn this off in Settings → About → "Send crash reports".</p>
@@ -20,7 +20,7 @@
 <h2>What leaves your phone, only if you turn it on</h2>
 <div class="card">
 <p><strong>Gmail.</strong> The app signs in to your own mailbox over IMAP with an app password you create. The password is stored encrypted on your phone and used only to read bank alerts.</p>
-<p><strong>Google Drive backup.</strong> Backups are uploaded to a "Leakly backups" folder in your own Google Drive. The app uses the <code>drive.file</code> permission, so it can see and change only the files it created, not the rest of your Drive. Google sign-in is handled by Google Play services; the app never sees your Google password.</p>
+<p><strong>Google Drive backup.</strong> Backups are encrypted on your phone with a passphrase you choose, and then uploaded to a "Leakly backups" folder in your own Google Drive. Without the passphrase they can't be read, by Google or anyone else; if you forget it, they can't be restored. The app uses the <code>drive.file</code> permission, so it can see and change only the files it created, not the rest of your Drive. Google sign-in is handled by Google Play services; the app never sees your Google password.</p>
 <p><strong>Google Sheet.</strong> If you set it up, transactions are sent to a Google Sheet and script that you own.</p>
 <p><strong>Fund prices.</strong> Mutual fund and NPS prices are downloaded from public sources (AMFI and npsnav.in). None of your data is sent with these requests.</p>
 </div>
