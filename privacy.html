@@ -1,33 +1,43 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Leakly Privacy Policy</title>
+<title>PaiYo Privacy Policy</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head>
 <body>
-<header><h1>Privacy policy</h1><p>Leakly: AIO Budgeting Solution · effective 26 October 2026</p></header>
+<header><h1>Privacy policy</h1><p>PaiYo: Track, Budget &amp; Save · effective 27 October 2026</p></header>
 <main>
-<p>Leakly is an Android app made by AdRaw App Studio. This policy explains what the app reads, where that data is kept, and what leaves your phone.</p>
+<p>PaiYo is an Android app made by AdRaw App Studio. This policy explains what the app reads, where that data is kept, how it is protected, and what leaves your phone.</p>
 
 <h2>What the app reads</h2>
-<p>With your permission, Leakly reads SMS messages on your phone, and (only if you connect Gmail) emails in your own mailbox, to find alerts from banks and businesses that mention an amount. Personal messages are skipped. One-time-password messages are never stored.</p>
+<p>With your permission, PaiYo reads SMS messages on your phone, and (only if you connect Gmail) emails in your own mailbox, to find alerts from banks and businesses that mention an amount. Personal messages are skipped. One-time-password messages are never stored.</p>
 
 <h2>Where your data is kept</h2>
-<p>Transactions, budgets, bills, accounts and settings are stored in the app's private storage on your phone, in an encrypted database. Its key is created on your phone and protected by Android's hardware-backed Keystore, so it never leaves the phone. The text of each bank alert is kept for 30 days, so it can be re-read or reported, and then deleted; the transaction it produced stays. Your transactions and messages are never sent to the developer or anyone else. Leakly has no server, no user accounts, no analytics and no advertising.</p>
+<p>Transactions, budgets, bills, accounts and settings are stored only on your phone, in the app's private storage and in an encrypted database (see below). Your transactions and messages are never sent to the developer or anyone else. PaiYo has no server, no user accounts, no analytics and no advertising.</p>
+
+<h2>How your data is protected</h2>
+<div class="card">
+<p><strong>Encrypted database.</strong> The app's database is encrypted with AES-256 (SQLCipher). Its key is 32 random bytes made on your phone and wrapped by a key in Android's hardware-backed Keystore, which can't be copied off the phone. Someone who copies the app's files without that phone can't read them.</p>
+<p><strong>Alert text kept for 30 days.</strong> The full text of each bank alert is kept for 30 days, so it can be re-read if a rule changes or reported if it was read wrongly. After that the text is deleted; the transaction it produced (amount, date, merchant, account and category) stays.</p>
+<p><strong>Passphrase-encrypted backups.</strong> Backups, whether to Google Drive or to a file, are encrypted on your phone before they are saved, with a passphrase you choose (at least 8 characters). The encryption is AES-256-GCM with a key derived from your passphrase using PBKDF2-SHA256 with 600,000 iterations. The passphrase is never sent anywhere. Without it a backup can't be opened by Google, the developer or anyone else; if you forget it, the backup can't be restored. Automatic daily backups pause until a passphrase is set.</p>
+<p><strong>App lock.</strong> If you turn it on, the app asks for your fingerprint, face or screen lock when it opens and after a minute in the background, and its screens are hidden from the recent-apps view and from screenshots.</p>
+<p><strong>New SMS senders.</strong> Payment alerts from an SMS sender the app doesn't recognise as a bank are held until you choose to count them, because a sender name can be faked.</p>
+<p><strong>Connections.</strong> The app connects only over HTTPS and trusts only your phone's built-in certificate authorities.</p>
+</div>
 
 <h2>Crash reports</h2>
 <p>If the app crashes, a crash report is sent to the developer through Firebase Crashlytics, a Google service. It contains the error and where in the app it happened, the last few screens you opened, your phone model, Android version, app version, a random report ID created by the app, and identifiers Firebase assigns to the installation. It never contains your transactions, messages, account numbers, contacts or your name. Google keeps crash reports for 90 days. You can turn this off in Settings → About → "Send crash reports".</p>
 
 <h2>What leaves your phone, only if you turn it on</h2>
 <div class="card">
-<p><strong>Gmail.</strong> If you choose <em>Sign in with Google</em>, Leakly asks Google for read-only access to your Gmail (<code>gmail.readonly</code>). It searches only for emails from bank and card senders and reads those messages on your phone to extract the amount, date, merchant and account. It keeps the resulting transactions, and the alert's text for 30 days as described above, in the app's encrypted storage. It never sends, changes, deletes or labels email, and email content is never sent to the developer or any server. Google sign-in is handled by Google Play services; the app never sees your Google password and keeps no long-lived token. You can remove access in the app (Settings → Gmail alerts → Disconnect) or at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</p>
+<p><strong>Gmail.</strong> If you choose <em>Sign in with Google</em>, PaiYo asks Google for read-only access to your Gmail (<code>gmail.readonly</code>). It searches only for emails from bank and card senders and reads those messages on your phone to extract the amount, date, merchant and account. It keeps the resulting transactions, and the alert's text for 30 days as described above, in the app's encrypted storage. It never sends, changes, deletes or labels email, and email content is never sent to the developer or any server. Google sign-in is handled by Google Play services; the app never sees your Google password and keeps no long-lived token. You can remove access in the app (Settings → Gmail alerts → Disconnect) or at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</p>
 <p>As an advanced alternative you can instead give the app a Gmail app password; it is stored encrypted on your phone and used only to read bank alerts over IMAP.</p>
-<p><strong>Google Drive backup.</strong> Backups are encrypted on your phone with a passphrase you choose, and then uploaded to a "Leakly backups" folder in your own Google Drive. Without the passphrase they can't be read, by Google or anyone else; if you forget it, they can't be restored. The app uses the <code>drive.file</code> permission, so it can see and change only the files it created, not the rest of your Drive. Google sign-in is handled by Google Play services; the app never sees your Google password.</p>
+<p><strong>Google Drive backup.</strong> Backups are encrypted on your phone with a passphrase you choose, and then uploaded to a "PaiYo backups" folder in your own Google Drive. Without the passphrase they can't be read, by Google or anyone else; if you forget it, they can't be restored. The app uses the <code>drive.file</code> permission, so it can see and change only the files it created, not the rest of your Drive. Google sign-in is handled by Google Play services; the app never sees your Google password.</p>
 <p><strong>Google Sheet.</strong> If you set it up, transactions are sent to a Google Sheet and script that you own.</p>
 <p><strong>Fund prices.</strong> Mutual fund and NPS prices are downloaded from public sources (AMFI and npsnav.in). None of your data is sent with these requests.</p>
 </div>
 
 <h2>Use of Google user data</h2>
-<p>Leakly's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically:</p>
+<p>PaiYo's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically:</p>
 <ul>
 <li>Gmail data is used only to show you your own transactions, budgets and bills inside the app.</li>
 <li>Drive access is used only to store and restore your own encrypted backups.</li>
@@ -37,16 +47,16 @@
 </ul>
 
 <h2>Sharing</h2>
-<p>Leakly does not sell or share your data. Crash reports are processed by Google (Firebase) on the developer's behalf. When you choose "Report this format" or "Send feedback", the app opens your phone's share sheet with the text (account numbers and references blanked out, plus your app version, phone model, Android version and report ID so the problem can be looked into); you decide whether and to whom to send it.</p>
+<p>PaiYo does not sell or share your data. Crash reports are processed by Google (Firebase) on the developer's behalf. When you choose "Report this format" or "Send feedback", the app opens your phone's share sheet with the text (account numbers and references blanked out, plus your app version, phone model, Android version and report ID so the problem can be looked into); you decide whether and to whom to send it.</p>
 
 <h2>Removing your data</h2>
 <p>Uninstalling the app deletes everything it stored on your phone. Backups in your Drive and rows in your Sheet stay until you delete them. You can disconnect Drive in the app or at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
 
 <h2>Children</h2>
-<p>Leakly is not directed at children under 18.</p>
+<p>PaiYo is not directed at children under 18.</p>
 
 <h2>Changes and contact</h2>
-<p>If this policy changes, the new version will be posted on this page with a new date. Questions: <a href="mailto:app.leakly@thevoltdesk.in">app.leakly@thevoltdesk.in</a></p>
+<p>If this policy changes, the new version will be posted on this page with a new date. Questions: <a href="mailto:app.paiyo@thevoltdesk.in">app.paiyo@thevoltdesk.in</a></p>
 </main>
-<footer>© 2026 AdRaw App Studio · <a href="mailto:app.leakly@thevoltdesk.in">app.leakly@thevoltdesk.in</a></footer>
+<footer>© 2026 AdRaw App Studio · <a href="mailto:app.paiyo@thevoltdesk.in">app.paiyo@thevoltdesk.in</a></footer>
 </body></html>
