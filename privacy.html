@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head>
 <body>
-<header><h1>Privacy policy</h1><p>PaiYo: Track, Budget &amp; Save · effective 27 October 2026</p></header>
+<header><h1>Privacy policy</h1><p>PaiYo: Track, Budget &amp; Save · effective 28 October 2026</p></header>
 <main>
 <p>PaiYo is an Android app made by AdRaw App Studio. This policy explains what the app reads, where that data is kept, how it is protected, and what leaves your phone.</p>
 
@@ -32,7 +32,7 @@
 <p><strong>Gmail.</strong> If you choose <em>Sign in with Google</em>, PaiYo asks Google for read-only access to your Gmail (<code>gmail.readonly</code>). It searches only for emails from bank and card senders and reads those messages on your phone to extract the amount, date, merchant and account. It keeps the resulting transactions, and the alert's text for 30 days as described above, in the app's encrypted storage. It never sends, changes, deletes or labels email, and email content is never sent to the developer or any server. Google sign-in is handled by Google Play services; the app never sees your Google password and keeps no long-lived token. You can remove access in the app (Settings → Gmail alerts → Disconnect) or at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</p>
 <p>As an advanced alternative you can instead give the app a Gmail app password; it is stored encrypted on your phone and used only to read bank alerts over IMAP.</p>
 <p><strong>Google Drive backup.</strong> Backups are encrypted on your phone with a passphrase you choose, and then uploaded to a "PaiYo backups" folder in your own Google Drive. Without the passphrase they can't be read, by Google or anyone else; if you forget it, they can't be restored. The app uses the <code>drive.file</code> permission, so it can see and change only the files it created, not the rest of your Drive. Google sign-in is handled by Google Play services; the app never sees your Google password.</p>
-<p><strong>Google Sheet.</strong> If you set it up, transactions are sent to a Google Sheet and script that you own.</p>
+<p><strong>Live Google Sheet.</strong> If you turn it on, PaiYo creates a spreadsheet called "PaiYo" in your own Google Drive and writes your transactions, budget and bills to it with the Google Sheets API, directly from your phone. It uses the same <code>drive.file</code> permission as backups, so it can open only the files it created. Unlike backups, the Sheet is not encrypted: anyone you share it with can read it. You can stop the updates in the app (Settings → Live Google Sheet → Stop); the Sheet stays in your Drive until you delete it. If you instead set up the older route with your own Sheet and Apps Script, rows are sent to that script in your own Google account.</p>
 <p><strong>Fund prices.</strong> Mutual fund and NPS prices are downloaded from public sources (AMFI and npsnav.in). None of your data is sent with these requests.</p>
 </div>
 
@@ -40,7 +40,7 @@
 <p>PaiYo's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically:</p>
 <ul>
 <li>Gmail data is used only to show you your own transactions, budgets and bills inside the app.</li>
-<li>Drive access is used only to store and restore your own encrypted backups.</li>
+<li>Drive access is used only to store and restore your own encrypted backups and, if you turn it on, to create and update your live Google Sheet.</li>
 <li>Google user data is not transferred to anyone, except to your own Google Drive and Google Sheet when you turn those features on.</li>
 <li>Google user data is not used for advertising, is not sold, and is not used to train AI or machine-learning models.</li>
 <li>No person reads your Google user data, unless you send it yourself (for example with "Report this format") or the law requires it.</li>
