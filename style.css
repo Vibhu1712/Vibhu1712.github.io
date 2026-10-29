@@ -1,7 +1,83 @@
-:root{--p:#3629B7;--ink:#343434;--grey:#6f6f6f;--bg:#fff;--tint:#F2F1F9}
-@media (prefers-color-scheme:dark){:root{--ink:#ececec;--grey:#a3a3ad;--bg:#000;--tint:#15151d;--p:#b4aef0}}
-*{box-sizing:border-box}body{margin:0;font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-header{background:#3629B7;color:#fff;padding:40px 20px 56px}header h1{margin:0;font-size:32px}header p{margin:4px 0 0;opacity:.85}
-main{max-width:760px;margin:-28px auto 0;background:var(--bg);border-radius:28px 28px 0 0;padding:28px 20px 48px}
-h2{font-size:20px;margin:28px 0 8px}a{color:var(--p)}.card{background:var(--tint);border-radius:16px;padding:16px 18px;margin:12px 0}
-footer{max-width:760px;margin:0 auto;padding:0 20px 32px;color:var(--grey);font-size:13px}
+/* PaiYo site — follows the app's look: indigo band, white sheet with a 28px rounded top,
+   16px cards with a soft indigo shadow, Poppins. Dark = true black with lifted indigo. */
+:root{--p:#3629B7;--deep:#281C9D;--p2:#5655B9;--p3:#A8A3D7;--tint:#F2F1F9;--ink:#343434;--grey:#898989;--line:#E0E0E0;
+  --bg:#fff;--card:#fff;--shadow:0 4px 30px rgba(54,41,183,.07);--red:#FF4267;--blue:#0890FE;--yellow:#FFAF2A;--green:#52D5BA;--orange:#FB6B18;--gold:#FFB325}
+@media (prefers-color-scheme:dark){:root{--ink:#ececec;--grey:#a3a3ad;--line:#2a2a33;--bg:#000;--card:#131320;--tint:#15151d;--p:#B4AEF0;--p2:#8D84F0;--shadow:0 4px 30px rgba(0,0,0,.5)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+a{color:var(--p)}
+img{max-width:100%}
+
+/* header band */
+.band{background:linear-gradient(135deg,#3629B7,#281C9D);color:#fff;padding:16px 20px 64px}
+@media (prefers-color-scheme:dark){.band{background:linear-gradient(135deg,#16123A,#0c0a22)}}
+.band h1{margin:20px 0 4px;font-size:32px;font-weight:600;line-height:1.2}
+.band p{margin:0;opacity:.85;max-width:640px}
+.top{display:flex;align-items:center;gap:6px;max-width:960px;margin:0 auto;flex-wrap:wrap}
+.top a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:999px;font-size:14px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.16)}
+.top .brand{font-weight:600;font-size:18px;margin-right:auto;display:flex;align-items:center;gap:8px;padding-left:0}
+.band>h1,.band>p,.hero{max-width:960px;margin-left:auto;margin-right:auto}
+.coin{width:26px;height:26px;border-radius:7px;display:inline-block}
+
+/* white sheet */
+.sheet{max-width:960px;margin:-28px auto 0;background:var(--bg);border-radius:28px 28px 0 0;padding:28px 20px 48px}
+h2{font-size:20px;font-weight:600;margin:36px 0 10px}
+h3{font-size:16px;font-weight:600;margin:28px 0 8px;color:var(--p)}
+h4{font-size:15px;margin:20px 0 6px}
+.card{background:var(--card);border-radius:16px;padding:18px 20px;margin:12px 0;box-shadow:var(--shadow);border:1px solid var(--line)}
+.card ul{margin:0;padding-left:20px}
+.muted{color:var(--grey);font-size:14px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;padding-top:16px}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.16);border-radius:999px;padding:4px 12px;font-size:13px;margin-bottom:12px}
+.hero h1{font-size:40px;margin:0 0 8px}
+.hero .lead{font-size:18px;opacity:.9;margin-bottom:20px}
+.btn{display:inline-block;background:#fff;color:#3629B7;font-weight:600;padding:12px 22px;border-radius:14px;text-decoration:none;margin:4px 8px 4px 0}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.phone{justify-self:center;width:260px;aspect-ratio:9/19;border-radius:36px;background:#000;padding:10px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.phone img,.phone .blank{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:28px;display:block;background:#1a1636}
+.phone .blank{display:flex;align-items:center;justify-content:center;color:#a8a3d7;font-size:13px;text-align:center;padding:20px}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.hero h1{font-size:32px}.phone{width:200px}}
+
+/* feature tiles (category-tile look) */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.tile{background:var(--card);border-radius:16px;padding:18px;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;gap:14px}
+.tile .ic{flex:none;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:18px}
+.tile b{display:block;margin-bottom:2px}
+.tile p{margin:0;font-size:14px;color:var(--grey)}
+.ic.i1{background:var(--p2)}.ic.i2{background:var(--orange)}.ic.i3{background:#1BAF7A}.ic.i4{background:#EDA100}.ic.i5{background:#E8476A}.ic.i6{background:var(--blue)}.ic.i7{background:#343434}
+
+/* screenshots */
+.shots{display:flex;gap:16px;overflow-x:auto;padding:8px 2px 18px;scroll-snap-type:x mandatory}
+.shots figure,.shot{margin:0;scroll-snap-align:start;flex:none}
+.shots img,.shot img{width:220px;height:470px;object-fit:cover;object-position:top;border-radius:22px;border:6px solid #000;background:#000;display:block}
+.shotpair{float:right;clear:right;display:flex;gap:14px;margin:0 0 12px 20px}
+.shot{margin:0;width:200px}
+.guide h3,.guide h2,.guide .shots{clear:both}
+.shot img{width:200px;height:430px}
+figcaption{font-size:13px;color:var(--grey);text-align:center;margin-top:6px}
+.shot.missing,.shots figure.missing{display:none}
+@media (max-width:720px){.shotpair{float:none;overflow-x:auto;margin:0 0 12px}.shot{flex:none}}
+
+/* dock-style page nav */
+.dock{position:sticky;bottom:12px;margin:24px auto 0;width:max-content;max-width:calc(100% - 24px);display:flex;gap:4px;padding:6px;border-radius:999px;
+  background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border:1px solid rgba(54,41,183,.25);box-shadow:0 8px 30px rgba(54,41,183,.18);overflow-x:auto}
+@media (prefers-color-scheme:dark){.dock{background:rgba(22,18,58,.86);border-color:rgba(180,174,240,.3)}}
+.dock a{text-decoration:none;color:var(--ink);font-size:13px;padding:8px 12px;border-radius:999px;white-space:nowrap;transition:transform .15s}
+.dock a:hover{background:var(--tint);transform:scale(1.08)}
+
+/* guide typography */
+.guide table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0;display:block;overflow-x:auto}
+.guide th,.guide td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+.guide th{background:var(--tint)}
+.guide code{background:var(--tint);padding:1px 5px;border-radius:6px;font-size:.9em}
+.guide hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+.guide ol,.guide ul{padding-left:22px}
+.guide li{margin:4px 0}
+.guide p em{color:var(--ink)}
+.guide .toc,.guide>ol:first-of-type{background:var(--tint);border-radius:16px;padding:16px 16px 16px 36px}
+
+footer{max-width:960px;margin:0 auto;padding:0 20px 32px;color:var(--grey);font-size:13px}
