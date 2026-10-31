@@ -13,7 +13,7 @@ src = re.sub(r'\d+\. \[Feature index\]\(#feature-index\)\n', '', src)
 src = re.sub(r'\d+\. \[Keeping this guide current\]\(#keeping-this-guide-current\)\n', '', src)
 src = src.replace('(Building it yourself from source is covered in `README.md`.)', '')
 src = src.replace('(steps in `README.md`)', 'for anyone already on it')
-src = re.sub(r' \(F\d+\)', '', src)
+src = re.sub(r' \(F\d+[^)]*\)', '', src)  # (F38) and (F38; note)
 src = src.replace('Public privacy policy: https://paiyo.thevoltdesk.in/privacy.html', 'Full details: the [privacy policy](privacy.html).')
 
 body = markdown.markdown(src, extensions=['tables', 'toc', 'sane_lists'])

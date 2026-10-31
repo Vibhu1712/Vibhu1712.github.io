@@ -10,10 +10,10 @@
 <nav class="top"><a class="brand" href="index.html"><img class="coin" src="img/icon-192.png" alt="">PaiYo</a><a href="index.html" class="on">Home</a><a href="guide.html">Guide</a><a href="privacy.html">Privacy</a></nav>
 <div class="hero">
 <div>
-<span class="tag">Android · private trial</span>
+<span class="tag">Android · testing on Google Play</span>
 <h1>Har pai ka hisaab.</h1>
 <p class="lead">PaiYo reads the bank, card and UPI alerts your phone already gets and turns them into a categorised spending log, budgets, bills and net worth. No typing in every payment. Nothing leaves your phone.</p>
-<a class="btn" href="guide.html">Read the guide</a><a class="btn ghost" href="mailto:app.paiyo@thevoltdesk.in">Ask for the trial</a>
+<a class="btn" href="guide.html">Read the guide</a><a class="btn ghost" href="mailto:app.paiyo@thevoltdesk.in?subject=Join%20the%20PaiYo%20test">Join the test</a>
 </div>
 <div class="phone"><img src="img/home.png" alt="PaiYo Home screen" onerror="this.outerHTML='<div class=blank>Home screen<br>screenshot</div>'"></div>
 </div>
@@ -22,8 +22,8 @@
 <main class="sheet">
 <h2>What it does</h2>
 <div class="tiles">
-<div class="tile"><div class="ic i1">₹</div><div><b>Transactions, automatically</b><p>Every bank, card and UPI alert becomes a transaction with a merchant and a category. Correct one, apply it to all.</p></div></div>
-<div class="tile"><div class="ic i2">◔</div><div><b>Budgets on your salary month</b><p>Limits per category and an overall cap, running from salary day to salary day, with a nudge at 80% and 100%.</p></div></div>
+<div class="tile"><div class="ic i1">₹</div><div><b>Transactions, automatically</b><p>Every bank, card and UPI alert, by SMS, Gmail or your UPI app's notification, becomes a transaction with a merchant and a category. Correct one, apply it to all.</p></div></div>
+<div class="tile"><div class="ic i2">◔</div><div><b>Budgets on your salary month</b><p>Limits per category, added up by head (Food, Travel, Bills…), and an overall cap, running from salary day to salary day, with a nudge at 80% and 100%.</p></div></div>
 <div class="tile"><div class="ic i3">✓</div><div><b>Bills that tick themselves</b><p>Rent, EMIs, phone, school fees, the maid: ticked off when the payment alert arrives, reminded before they're due.</p></div></div>
 <div class="tile"><div class="ic i4">▤</div><div><b>Every account in one place</b><p>Savings, cards with billing cycles, loans, RD/FD, mutual funds and NPS, with balances that follow your payments and a net position.</p></div></div>
 <div class="tile"><div class="ic i5">▮</div><div><b>Home dashboard</b><p>Net worth, this month's figures, 12-month trends, where the money went, this month against last.</p></div></div>
@@ -44,7 +44,7 @@
 </div>
 
 <h2>Getting started</h2>
-<p class="muted">Three screens, one permission, and the last six months of alerts are read in while you watch.</p>
+<p class="muted">Four short screens, one permission, and the last six months of alerts are read in while you watch.</p>
 <div class="shots"><figure><img src="img/welcome.png" alt="Welcome" loading="lazy"><figcaption>Welcome</figcaption></figure><figure><img src="img/privacy.png" alt="Your data stays with you" loading="lazy"><figcaption>Your data stays with you</figcaption></figure><figure><img src="img/sms-access.png" alt="Allow SMS access" loading="lazy"><figcaption>Allow SMS access</figcaption></figure><figure><img src="img/bills-recurring.png" alt="Bills it finds by itself" loading="lazy"><figcaption>Bills it finds by itself</figcaption></figure><figure><img src="img/home-charts-1.png" alt="Where it went" loading="lazy"><figcaption>Where it went</figcaption></figure></div>
 
 <h2>Private by design</h2>
@@ -52,7 +52,7 @@
 <div class="card"><ul>
 <li>Only bank and business alerts that mention an amount are read. Personal SMS are never stored and one-time passwords are never stored.</li>
 <li>Your data is kept in an encrypted database whose key never leaves the phone; the text of each alert is deleted after 30 days.</li>
-<li>Gmail (read-only), Drive backups and the Sheet are your own Google services, used only if you switch them on, with the narrowest permissions.</li>
+<li>Gmail (read-only), UPI app notifications, Drive backups and the Sheet are used only if you switch them on, with the narrowest permissions. PaiYo says what it will read before Android asks.</li>
 <li>Backups are encrypted with a passphrase only you know before they reach your Drive. Optional app lock with fingerprint, face or screen lock.</li>
 </ul></div>
 <p>Read the <a href="privacy.html">privacy policy</a>.</p>
@@ -60,13 +60,16 @@
 <h2>Built for India</h2>
 <div class="card"><ul>
 <li>₹ amounts with lakh grouping; UPI, RuPay, IMPS/NEFT, cheques, ATM, auto-debits; Hindi debit/credit words.</li>
+<li>Payments to people (the vegetable vendor, the kirana, the maid, tuition) counted as spending, with Household help and Repair and Services built in.</li>
+<li>Notifications from Google Pay, PhonePe, Paytm, BHIM, MobiKwik, CRED and Amazon Pay, for payments that send no bank SMS.</li>
 <li>Salary-day budget months with Delhi gazetted holidays built in; March pay in April handled.</li>
 <li>RD/FD, mutual funds priced from AMFI's daily NAV list, NPS from npsnav, CAMS/KFintech CAS and NPS statement imports.</li>
 <li>Thirty-plus bank and card SMS headers out of the box; a new one is held until you say it's yours.</li>
 </ul></div>
 
 <h2>Availability</h2>
-<p>PaiYo is in a private trial through Firebase App Distribution. To join, or for anything else: <a href="mailto:app.paiyo@thevoltdesk.in">app.paiyo@thevoltdesk.in</a>.</p>
+<p>PaiYo is in closed testing on Google Play. To join, email <a href="mailto:app.paiyo@thevoltdesk.in?subject=Join%20the%20PaiYo%20test">app.paiyo@thevoltdesk.in</a> with the Gmail address you use on Play; you'll get an opt-in link. Please stay opted in for at least 14 days.</p>
+<p class="muted">On the earlier Firebase test build? Back up to Drive first, uninstall it, install from Play and restore: the Play version can't install over it. Details in the <a href="guide.html#installing">guide</a>.</p>
 
 <nav class="dock"><a href="guide.html#home">Home</a><a href="guide.html#transactions">Transactions</a><a href="guide.html#accounts">Accounts</a><a href="guide.html#budget">Budget</a><a href="guide.html#bills">Bills</a><a href="guide.html#summary">Summary</a><a href="guide.html#settings">Settings</a></nav>
 </main>
