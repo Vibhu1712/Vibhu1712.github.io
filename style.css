@@ -81,3 +81,13 @@ figcaption{font-size:13px;color:var(--grey);text-align:center;margin-top:6px}
 .guide .toc,.guide>ol:first-of-type{background:var(--tint);border-radius:16px;padding:16px 16px 16px 36px}
 
 footer{max-width:960px;margin:0 auto;padding:0 20px 32px;color:var(--grey);font-size:13px}
+
+/* Blog */
+.postcard{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.postcard b{font-size:18px;color:var(--p)}
+.postcard:hover{border-color:var(--p3)}
+.post>*{max-width:760px}
+.post h2{margin-top:40px}
+.post p,.post li{font-size:16.5px}
+.post table td:last-child{white-space:nowrap}
+@media(max-width:420px){.top a{padding:6px 8px}}
