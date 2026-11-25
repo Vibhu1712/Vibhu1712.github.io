@@ -7,9 +7,9 @@
 <link rel="icon" href="img/icon-32.png"><link rel="apple-touch-icon" href="img/icon-192.png"><link rel="stylesheet" href="style.css"></head>
 <body>
 <header class="band"><nav class="top"><a class="brand" href="index.html"><img class="coin" src="img/icon-192.png" alt="">PaiYo</a><a href="index.html">Home</a><a href="guide.html" class="on">Guide</a><a href="privacy.html">Privacy</a></nav>
-<h1>User guide</h1><p>Every screen, every control, and the answers to the questions testers ask.</p></header>
+<h1>User guide</h1><p>Every screen, every control, and the answers to the questions people ask.</p></header>
 <main class="sheet guide">
-<p><em>Last reviewed: 31 Oct 2026.</em></p>
+<p><em>Last reviewed: 25 Nov 2026.</em></p>
 <hr />
 <h2 id="contents">Contents</h2>
 <ol>
@@ -41,10 +41,9 @@
 <hr />
 <h2 id="2-getting-started">2. Getting started</h2>
 <h3 id="installing">Installing</h3>
-<p>PaiYo is in <strong>closed testing on Google Play</strong>. Send the Gmail address you use on Play to app.paiyo@thevoltdesk.in and you'll get an opt-in link: open it, tap <strong>Become a tester</strong>, then install PaiYo from the Play Store. Updates arrive through Play. Please stay opted in for at least 14 days; Google counts testers who do. </p>
-<p><em>Moving from the earlier Firebase test build?</em> The Play version is signed differently, so it can't install over it. Back up first (<em>Settings → Google Drive backup → Back up now</em>), uninstall the old PaiYo, install from Play, then tap <strong>Restore backup</strong> on the first screen.</p>
+<p>PaiYo is on <strong>Google Play</strong>: open the Play Store, search for <strong>PaiYo</strong>, or go straight to https://play.google.com/store/apps/details?id=app.paiyo and tap <strong>Install</strong>. It's free, for Android phones, and updates arrive through Play. (Building it yourself from source is covered in <code>README.md</code>.)</p>
+<p><em>Moving from an earlier test build</em> (one installed from a file or Firebase)? The Play version is signed differently, so it can't install over it. Back up first (<em>Settings → Google Drive backup → Back up now</em>), uninstall the old PaiYo, install from Play, then tap <strong>Restore backup</strong> on the first screen.</p>
 <h3 id="first-run">First run</h3>
-<div class="shots"><figure><img src="img/welcome.png" alt="Welcome" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Welcome</figcaption></figure><figure><img src="img/privacy.png" alt="Your data stays with you" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Your data stays with you</figcaption></figure><figure><img src="img/sms-access.png" alt="Allow SMS access" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Allow SMS access</figcaption></figure></div>
 <p>PaiYo opens with four short screens:</p>
 <ol>
 <li><strong>Welcome</strong> — what the app does.</li>
@@ -60,12 +59,11 @@
 <h3 id="moving-to-a-new-phone-or-a-new-build">Moving to a new phone or a new build</h3>
 <p>PaiYo doesn't move data by itself. On the old phone or build: <em>Settings → Google Drive backup → Back up now</em>. On the new one, tap <strong>Restore backup</strong> on the first screen (or <em>Settings → Google Drive backup → Restore…</em>), connect the same Google Drive, pick the backup and enter your backup passphrase. Check your transactions are there before uninstalling the old one. Backups live in a <em>PaiYo backups</em> folder in your Drive.</p>
 <h3 id="moving-around">Moving around</h3>
-<p>A floating <strong>dock bar</strong> along the bottom holds all seven screens: <strong>Home, Transactions, Accounts, Budget, Bills, Summary, Settings</strong>. Tap an icon, or <strong>swipe left or right</strong> anywhere on a page to move to the next one. Sliding a finger along the bar magnifies the icon under it, Dock-style (off when the phone's <em>Remove animations</em> setting is on). On narrow phones or large display sizes the bar scrolls sideways.</p>
+<p>A floating <strong>dock bar</strong> along the bottom holds all seven screens: <strong>Home, Transactions, Accounts, Budget, Bills, Summary, Settings</strong>. Tap an icon, or <strong>swipe left or right</strong> anywhere on a page to move to the next one. Sliding a finger along the bar magnifies the icon under it, Dock-style (off when the phone's <em>Remove animations</em> setting is on). Changing page gives a light tick you can feel, if the phone's <em>Touch feedback</em> (vibration) setting is on. On narrow phones or large display sizes the bar scrolls sideways.</p>
 <p>The header on most screens has <strong>⟳ Sync now</strong> (reads new SMS and email, refreshes prices, pushes the Sheet) and a <strong>share icon</strong> that exports the Excel file.</p>
 <hr />
 <h2 id="3-the-seven-screens">3. The seven screens</h2>
 <h3 id="home">Home</h3>
-<div class="shotpair"><figure class="shot"><img src="img/home.png" alt="Home" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Home</figcaption></figure></div>
 <p>The dashboard. Each chart has a legend with values; tap columns and slices, drag across line charts to read values. Colours follow a fixed, colour-blind-checked order.</p>
 <table>
 <thead>
@@ -105,9 +103,7 @@
 </tr>
 </tbody>
 </table>
-<div class="shots"><figure><img src="img/home-charts-1.png" alt="Where it went · how you paid" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Where it went · how you paid</figcaption></figure><figure><img src="img/home-charts-2.png" alt="Monthly average · this month vs last" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Monthly average · this month vs last</figcaption></figure></div>
 <h3 id="transactions">Transactions</h3>
-<div class="shotpair"><figure class="shot"><img src="img/transactions.png" alt="Transactions" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Transactions</figcaption></figure><figure class="shot"><img src="img/money-in.png" alt="Filtered to money in" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Filtered to money in</figcaption></figure></div>
 <p>The month view. At the top: <strong>‹ October 2026 ›</strong> (swipe the month row or tap the arrows to change month; it shows the budget month's date range), <strong>Spent / Received</strong> totals, <strong>Money out / Money in</strong> filter chips, and a <strong>search box</strong>. Scrolling down folds the totals, chips and search box away, leaving the month row; pull down at the top to bring them back. Rows are grouped by day.</p>
 <p><strong>Search</strong> covers all months: type a merchant, category, bank, UPI ID or amount (<code>1,250</code>, <code>&gt;500</code>, <code>&lt;200</code>). Every word must match; results show a count and total.</p>
 <p><strong>Tap a transaction</strong> to open it. You can:</p>
@@ -124,25 +120,23 @@
 </ul>
 <p>Cards that can appear above the list:</p>
 <ul>
-<li><strong>Same payment?</strong> — an SMS and an email show the same amount, direction and account within 3 days but the names don't match clearly. <em>Same payment</em> keeps one (the preferred source, see Settings → SMS or email?); <em>Two payments</em> keeps both and never asks again for that pair.</li>
+<li><strong>Same payment?</strong> — an SMS and an email show the same amount, direction and account within 3 days but the names don't match clearly. <em>Same payment</em> keeps one (the preferred source, see Settings → SMS, email or app?); <em>Two payments</em> keeps both and never asks again for that pair.</li>
 <li><strong>New sender: ABCDEF</strong> — an SMS header PaiYo doesn't know named a masked account. <em>Count them</em> if this is your bank, card or wallet; <em>Don't count</em> otherwise. The answer is remembered per sender, and the held alerts are added when you allow it.</li>
 <li><strong>Allow SMS access</strong> if the permission isn't granted yet. <em>Allow</em> first shows <strong>Let PaiYo read your SMS?</strong> (what's read and what isn't); <em>Allow</em> there opens Android's prompt, <em>Not now</em> leaves it off.</li>
 </ul>
 <h3 id="accounts">Accounts</h3>
-<div class="shotpair"><figure class="shot"><img src="img/accounts.png" alt="Accounts" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Accounts</figcaption></figure><figure class="shot"><img src="img/card.png" alt="A card's statement, by bill" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>A card's statement, by bill</figcaption></figure></div>
 <p>Accounts appear as their alerts arrive; you can also add any by hand. The screen totals <strong>Moved into RDs, deposits and funds this month</strong> and shows the <strong>Net position</strong>.</p>
 <p><strong>Bank accounts, cards and wallets</strong> show a <em>Balance today</em> that starts from the latest SMS balance ("Avl Bal") or the figure you typed, and then follows every later payment and credit, so it stays current between alerts. When a new alert states a different balance, PaiYo asks: <em>Keep</em> PaiYo's figure or <em>Go back to the SMS balance</em> (a difference usually means a missed or doubled transaction). Tap an account to <strong>name it</strong>, set its <strong>type</strong> (Savings, RD, FD, Loan, Credit card, Fund, NPS, Equity…), <strong>type a balance</strong> (used until a newer SMS has one), or <strong>hide it</strong>.</p>
 <p><strong>Credit cards</strong> are drawn as card faces. Enter the card's <strong>total credit limit</strong> to see the amount owed (limit − limit left in the latest card SMS), plus owed · unbilled · limit and the due date. Set the <strong>billing cycle</strong> (bill date and payment due day) and tap the card for its <strong>statement</strong>: <em>By bill</em> (each cycle with spent, refunds, paid and left to pay; the current cycle not yet billed) or <em>By month</em>. It's worked out from your card alerts; the bank's statement also carries any earlier unpaid balance, fees and interest.</p>
 <p><strong>Add an account</strong> — for things with no SMS balance: a car or home loan (enter the outstanding from your statement, link its <strong>EMI category</strong> to see what you've paid since), an FD, an RD, stocks (a typed value), a <strong>mutual fund</strong> or <strong>NPS</strong>.</p>
 <ul>
-<li><strong>Mutual fund</strong>: tap it, search the scheme (from AMFI's daily NAV list; pick the exact plan, Direct/Regular, Growth/IDCW) and enter the units you hold. Value = units × latest NAV, refreshed on open and at each sync. Mapped SIP payments after today add units at that day's NAV.</li>
+<li><strong>Mutual fund</strong>: choosing <em>Mutual fund</em> in <strong>Add an account</strong> shows the fund search right there: type a few letters (from AMFI's daily NAV list, or mfapi.in's list if AMFI can't be reached; pick the exact plan, Direct/Regular, Growth/IDCW; if neither list downloads, the line under the search box says why), pick the fund and enter the units you hold. Tap the account later to change the scheme or units and enter the units you hold. Value = units × latest NAV, refreshed on open and at each sync. Mapped SIP payments after today add units at that day's NAV.</li>
 <li><strong>NPS</strong>: add each scheme (e.g. "SBI central govt", from npsnav.in's list) and its units. Salary deductions don't show in bank SMS, so update units from your statement now and then.</li>
 <li><strong>RD/FD opened by SMS</strong>: when the bank's "RD A/c … has been opened" alert arrives, PaiYo adds the deposit itself and tells you ("New recurring deposit added").</li>
 </ul>
 <p><strong>Import a statement</strong> — <em>Mutual fund CAS</em> (the Consolidated Account Statement from CAMS or KFintech, detailed or the one-row-per-folio summary, emailed as a password-protected PDF) or <em>NPS statement</em> (the CRA transaction statement; password is often your PRAN or date of birth). PaiYo shows every holding found (units, NAV, value, cost, folio) before importing; each scheme becomes or updates an account. Re-import a newer statement any time to correct units. Files over 20 MB or 200 pages are refused; if a PDF can't be read, the first lines it saw are shown so you can report it. Demat CAS (NSDL/CDSL) isn't supported.</p>
 <p><strong>Money going into this account</strong> — on an RD, FD, fund or loan, tap <em>Add payments that go into it</em> and pick the payee from your savings-account payments (suggested ones first). Choose <em>Only payments of ₹X</em> when the same name is paid for different things, or <em>Every payment, any amount</em>. The account then shows what moved in this month and in all, and you can tick <em>Don't count them as spending</em> (they become Self Transfer and budgets leave them out).</p>
 <h3 id="budget">Budget</h3>
-<div class="shotpair"><figure class="shot"><img src="img/budget.png" alt="Budget" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Budget</figcaption></figure><figure class="shot"><img src="img/budgets-editor.png" alt="Edit budgets" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Edit budgets</figcaption></figure></div>
 <p>Monthly limits per category, with an <strong>overall budget</strong> for everyday spending. A <strong>By head</strong> card adds the category budgets up under their heads (Food, Beverages and Groceries; Utility &amp; Bills; Travel &amp; Transport; Lifestyle; …) and shows spending against each.</p>
 <ul>
 <li><strong>Budget month</strong> runs from salary day to the day before the next one (the last working day of the previous month, skipping weekends and Delhi gazetted holidays; March pay comes in April). A real credit tagged <em>Salary</em> within 6 days of the expected day starts the month instead. Switch to calendar months under <em>Settings → Budget month</em>.</li>
@@ -155,7 +149,6 @@
 <li><strong>Alerts</strong>: a notification at 80% and again at 100% of a budget, once each per month, the moment the alert arrives (<em>Settings → Budget alerts</em>).</li>
 </ul>
 <h3 id="bills">Bills</h3>
-<div class="shotpair"><figure class="shot"><img src="img/bills.png" alt="Bills" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Bills</figcaption></figure><figure class="shot"><img src="img/add-bill.png" alt="Add a bill" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Add a bill</figcaption></figure></div>
 <p>Recurring bills and subscriptions: rent, EMIs, phone, electricity, school fees, the maid.</p>
 <ul>
 <li><strong>Add a bill</strong>: name, amount (or <em>Amount changes each time</em>, for electricity or a card statement), category, how often (monthly, 3-monthly, 6-monthly, yearly), next due date, and <em>Remind me</em> (on the day, or 1/3/7 days before). <strong>Link it to a merchant</strong> from your recent payments and PaiYo ticks it off when that payment's alert arrives within about 12 days of the due date (20 for rarer bills). Leave it unlinked for cash payments and tap <strong>Mark paid</strong> yourself.</li>
@@ -165,10 +158,8 @@
 <li>The Budget screen shows bills still to pay this budget month; the Excel file and live Sheet have a Bills tab.</li>
 </ul>
 <h3 id="summary">Summary</h3>
-<div class="shotpair"><figure class="shot"><img src="img/summary.png" alt="Summary" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Summary</figcaption></figure></div>
 <p>Spending for the month on screen: <strong>Where it went</strong> by head, tap a head to see its categories, <strong>Paid by</strong> payment mode, <strong>Top merchants</strong> (with the number of payments to each), and the <strong>last 6 budget months</strong> side by side. Spending leaves out card bill payments and self transfers. To see the payments behind a figure, search for the category or merchant on Transactions.</p>
 <h3 id="settings">Settings</h3>
-<div class="shots"><figure><img src="img/settings-1.png" alt="Budget month · categories" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Budget month · categories</figcaption></figure><figure><img src="img/settings-2.png" alt="Appearance · app lock · SMS" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Appearance · app lock · SMS</figcaption></figure><figure><img src="img/settings-3.png" alt="Drive backup · live Sheet · Excel" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>Drive backup · live Sheet · Excel</figcaption></figure><figure><img src="img/settings-4.png" alt="SMS or email? · troubleshooting · About" loading="lazy" onerror="this.parentNode.classList.add('missing')"><figcaption>SMS or email? · troubleshooting · About</figcaption></figure></div>
 <p>Each section has a small <strong>ⓘ</strong> that opens a short explanation. In order:</p>
 <table>
 <thead>
@@ -204,11 +195,11 @@
 </tr>
 <tr>
 <td><strong>UPI app notifications</strong></td>
-<td><em>Read payments from UPI apps</em> switch (turning it on first shows <strong>Let PaiYo read UPI app notifications?</strong>; <em>Allow</em> switches it on and opens Android's Notification access screen, <em>Not now</em> leaves it off), <em>Allow notification access</em> (same), <strong>Count app payments against</strong> (a savings account, or <em>No account</em>), the list of apps read. Tester build only for now.</td>
+<td><em>Read payments from UPI apps</em> switch (turning it on first shows <strong>Let PaiYo read UPI app notifications?</strong>; <em>Allow</em> switches it on and opens Android's Notification access screen, <em>Not now</em> leaves it off), <em>Allow notification access</em> (same), <strong>Count app payments against</strong> (a savings account, or <em>No account</em>), the list of apps read.</td>
 </tr>
 <tr>
 <td><strong>Gmail alerts</strong></td>
-<td><strong>Sign in with Google</strong> (first shows <strong>Let PaiYo read bank emails in Gmail?</strong>, then Google's screen; read-only Gmail, only mail from bank senders, no password stored), <em>Reconnect</em>; <em>Advanced: use an app password instead</em> (Gmail address + 16-character app password, stored encrypted); <strong>Extra alert senders</strong> (domains or addresses of banks PaiYo doesn't know).</td>
+<td>Steps for an app password (needs 2-Step Verification on your Google account), <em>Create an app password →</em>, <strong>Gmail address</strong>, <strong>16-letter app password (spaces are fine)</strong>, <strong>Connect</strong> (first shows <strong>Let PaiYo read bank emails in Gmail?</strong>; <em>Allow</em> signs in and syncs) / <em>Save &amp; sync</em>, <em>Disconnect</em>; <strong>Extra alert senders</strong> (domains or addresses of banks PaiYo doesn't know). The app password is stored encrypted on this phone.</td>
 </tr>
 <tr>
 <td><strong>Google Drive backup</strong></td>
@@ -223,8 +214,8 @@
 <td><strong>Export to Excel (.xlsx)</strong>; <strong>Sync every hour</strong> (reads new Gmail and updates the Sheet in the background; SMS are read as they arrive either way); the number of transactions stored.</td>
 </tr>
 <tr>
-<td><strong>SMS or email?</strong></td>
-<td>For each kind of payment (UPI, credit card, money in, everything else): <em>Prefer SMS</em>, <em>Prefer email</em> or <em>Whichever comes first</em>. See <a href="#4-how-paiyo-reads-your-alerts">section 4</a>.</td>
+<td><strong>SMS, email or app?</strong></td>
+<td>For each kind of payment (UPI, credit card, money in, everything else): which copy's details to keep when the same payment arrives more than once. <em>Prefer SMS</em>, <em>Prefer email</em> (only offered with Gmail connected), <em>Prefer app</em> (UPI only, with UPI app notifications on) or <em>Whichever comes first</em>. Whichever copy is kept, the clearest payee name is shown. See <a href="#4-how-paiyo-reads-your-alerts">section 4</a>.</td>
 </tr>
 <tr>
 <td><strong>Missing a transaction?</strong></td>
@@ -241,7 +232,7 @@
 <p><strong>Which SMS count.</strong> Only alerts from known bank and card headers (SBI, SBI Card, HDFC, ICICI, Axis, Kotak, Yes, IndusInd, IDFC FIRST, Federal, RBL, AU, PNB, BoB, BoI, Canara, Union, Central, IOB, Standard Chartered, HSBC, Amex, OneCard, Paytm, Jupiter, Fi, Axio Pay Later, and the RBI <code>*.bank.in</code> headers) that mention an amount. SMS from phone numbers, shops and apps (Swiggy, Amazon order SMS) are ignored. A header PaiYo doesn't know that names a masked account is held under <strong>New sender</strong> until you say whether to count it.</p>
 <p><strong>What's skipped.</strong> OTPs, autopay/mandate notices ("will be debited"), statements and due-date reminders, failed transactions, promotional SMS, and amounts over ₹10 crore. Refunds of failed payments are recorded as <em>Refund</em>.</p>
 <p><strong>UPI apps.</strong> GPay, PhonePe and Paytm don't send their own payment SMS; your <strong>bank</strong> does (e.g. <code>SBIUPI</code>), and that's what PaiYo records, with the payee from the alert. A RuPay credit card used on UPI counts as a card.</p>
-<p><strong>UPI app notifications</strong> (<em>Settings → UPI app notifications</em>). A payment made inside Google Pay, PhonePe, Paytm, BHIM, MobiKwik, CRED or Amazon Pay to a saved contact, or money received straight into the app, often produces no bank SMS or email. Switch <strong>Read payments from UPI apps</strong> on: PaiYo first explains what it reads (<strong>Let PaiYo read UPI app notifications?</strong>); tap <strong>Allow</strong> and Android opens its Notification access screen, where you turn PaiYo on. PaiYo then reads those apps' own notifications ("You paid ₹3,570 to Pramod Kumar Yadav", "₹500 received from Rahul") and records the payment as UPI, paid from the account you choose under <strong>Count app payments against</strong> (or none). Failed payments, requests and offers are skipped. When the bank's SMS for the same payment arrives too, the two are counted once. Notifications from any other app are ignored at the door and never read, stored or logged. These transactions show the app's name on the Transactions list.</p>
+<p><strong>UPI app notifications</strong> (<em>Settings → UPI app notifications</em>). A payment made inside Google Pay, PhonePe, Paytm, BHIM, MobiKwik, CRED or Amazon Pay to a saved contact, or money received straight into the app, often produces no bank SMS or email. Switch <strong>Read payments from UPI apps</strong> on: PaiYo first explains what it reads (<strong>Let PaiYo read UPI app notifications?</strong>); tap <strong>Allow</strong> and Android opens its Notification access screen, where you turn PaiYo on. PaiYo then reads those apps' own notifications ("You paid ₹3,570 to Pramod Kumar Yadav", "₹500 received from Rahul") and records the payment as UPI, paid from the account you choose under <strong>Count app payments against</strong> (or none). Only notifications that say money was paid, sent or received count: failed payments, requests, offers, order and delivery updates ("Delivered: your package · Total paid ₹1,299"), refunds, cashback and coins are skipped, and show under <strong>Recent alerts</strong> with the reason. When the bank's SMS for the same payment arrives too, the two are counted once: by default the SMS's details are kept (it names the account and the UPI reference) with the app's payee name ("Pramod Kumar Yadav" rather than "7969@ptyes"). Choose <em>Prefer app</em> under <em>Settings → SMS, email or app?</em> to keep the app's copy instead. Notifications from any other app are ignored at the door and never read, stored or logged. These transactions show the app's name on the Transactions list.</p>
 <p><strong>Money out or in</strong> is read from one dictionary of bank words (debited, Dr, Dbt, WDL, ATW, NACH/ECS debit, नामे; credited, Cr, Cdt, received, refund, जमा…). Short forms count only next to an amount or account ("Rs 2 Cr" is crore).</p>
 <p><strong>Categories</strong> come from merchant rules (Swiggy → Food &amp; Dining, IRCTC → Railways and Roadways, FASTag → Tolls…), for payees with no brand from words in the name (store, academy, motors…), and for QR-sticker payees under ₹500 (the vegetable vendor) Groceries. What's left is Others, unless <em>Settings → Learn my categories</em> is on: then the learner, trained on your own corrections (payee words, person / shop / QR, amount range, round or odd, weekday, payment mode), fills in a guess when it is at least 60% sure, marked <strong>?</strong> until you confirm it. Correct one with <em>Apply to all</em> and PaiYo follows your rule for past and future alerts from that merchant.</p>
 <p><strong>One payment, two alerts.</strong> The same payment reported by SMS and by email (or by a UPI SMS plus an account SMS) is stored once: matched on the UPI reference, or same amount + account within 20 minutes from a different sender, or up to 3 hours apart when the amount has paise, the names match, or they came within 20 minutes. Longer gaps (up to 3 days) are asked about under <em>Same payment?</em>. The copy from your <strong>preferred source</strong> supplies the details: by default UPI → SMS, credit cards → email, money in → email, everything else → whichever comes first. The first copy is recorded at once; when the preferred one arrives, the same transaction takes its details, and names, categories and accounts you've set stay.</p>
@@ -258,17 +249,18 @@
 <h2 id="6-privacy-and-security">6. Privacy and security</h2>
 <ul>
 <li><strong>Asked, not assumed.</strong> Before Android's SMS prompt, Android's Notification access screen and Google's Gmail screen, PaiYo shows what it will read and why; nothing is read until you tap <em>Allow</em>, and <em>Not now</em> leaves the feature off.</li>
-<li><strong>On the phone only.</strong> No PaiYo server or account. Gmail, Drive and the Sheet are your own Google services, used only if you switch them on, with the narrowest permissions (<code>gmail.readonly</code>; <code>drive.file</code>, files PaiYo creates).</li>
+<li><strong>On the phone only.</strong> No PaiYo server or account. Gmail, Drive and the Sheet are your own Google services, used only if you switch them on, with the narrowest access they offer (Gmail through an app password you can delete any time; Drive with <code>drive.file</code>, files PaiYo creates).</li>
 <li><strong>UPI app notifications</strong> (off unless you switch it on). Android's Notification access could show PaiYo every notification; PaiYo reads only those from the UPI apps listed in Settings and discards everything else unread. The notification text is kept 30 days like an SMS, then deleted.</li>
+<li><strong>Fund prices and lists</strong> come from public sources (AMFI, mfapi.in, npsnav.in); PaiYo only downloads from them and sends none of your data.</li>
 <li><strong>SMS.</strong> Only bank and business alerts with an amount are kept; personal SMS are never stored and OTP text is never stored. The alert text itself is deleted after <strong>30 days</strong>; the transaction stays.</li>
 <li><strong>Encrypted database.</strong> The database is encrypted (SQLCipher) with a key held in the phone's Android Keystore. <strong>App lock</strong> adds your fingerprint or screen lock and hides PaiYo's screens from recent apps and screenshots.</li>
-<li><strong>Encrypted backups</strong> with your passphrase; <strong>HTTPS only</strong> for every connection; release builds keep no logs.</li>
-<li><strong>Forged alerts.</strong> Emails must pass DKIM/SPF/DMARC; unknown SMS senders are held until you allow them; absurd amounts are rejected.</li>
+<li><strong>Encrypted backups</strong> with your passphrase; <strong>HTTPS only</strong> for every connection, and the app-password route checks it is really talking to Gmail's server; release builds keep no logs.</li>
+<li><strong>Forged alerts.</strong> Emails must pass DKIM/SPF/DMARC, and a forged one is given almost no work (its text is cut short before anything reads it); SMS from a header PaiYo doesn't know as a bank's (one that starts with a bank's name or ends in BK, BNK, BANK, CRD, CARD or UPI) is held until you allow it; absurd amounts are rejected.</li>
 <li><strong>Crash reports</strong> (optional, on by default): the error and phone model, never transactions or messages. A random report ID in <em>About</em> lets you quote a crash in feedback.</li>
 <li><strong>Reporting a format</strong> blanks account numbers, references, phones, UPI IDs and (optionally) names before anything is shared, and shows you the text first.</li>
 <li><code>allowBackup</code> is off, so nothing goes into Google's Android backup. Uninstalling removes all stored data; your Sheet, Excel files and Drive backups are yours to keep or delete.</li>
 </ul>
-<p>Full details: the <a href="privacy.html">privacy policy</a>.</p>
+<p>Public privacy policy: https://paiyo.thevoltdesk.in/privacy.html</p>
 <hr />
 <h2 id="7-faqs">7. FAQs</h2>
 <p><strong>A payment didn't show up.</strong> <em>Settings → Missing a transaction? → Recent alerts</em> says what happened to each alert (skipped and why, already there, a copy of another). If the alert isn't listed, tap <em>Rescan SMS and email</em>. If it's listed as <em>Not read as a payment</em>, tap <strong>Report this format</strong>: the blanked text reaches the developer and the format is added. For a new bank header, answer the <strong>New sender</strong> card on Transactions.</p>
@@ -276,7 +268,7 @@
 <p><strong>Where did Transfers / Services / Other go?</strong> They were renamed on 30 Oct: <em>To People</em>, <em>Repair and Services</em> and <em>Others</em>. Your payments, rules, bills and budgets moved with them, and a category you had added with the same name as a new built-in one (Loans, Tolls, Airlines…) was folded into it.</p>
 <p><strong>It counted my own transfer as spending / income.</strong> Transfers between your accounts within 30 minutes are marked Self Transfer automatically. For others, open the transaction, set the category to <em>Self Transfer</em> (or <em>Transfers</em>) and apply it to <em>this amount</em> for that name.</p>
 <p><strong>My salary isn't recognised, so the budget month is wrong.</strong> Tap the salary credit, set its category to <em>Salary</em>, tick <em>Apply to all</em>. The budget month then starts on the real credit date.</p>
-<p><strong>The same payment appears twice.</strong> Usually an SMS and an email with different names. Answer <em>Same payment?</em> when asked, or open one and tap <em>Not a transaction</em>. Set your preferred source under <em>Settings → SMS or email?</em>.</p>
+<p><strong>The same payment appears twice.</strong> Usually an SMS and an email with different names. Answer <em>Same payment?</em> when asked, or open one and tap <em>Not a transaction</em>. Set your preferred source under <em>Settings → SMS, email or app?</em>.</p>
 <p><strong>A credit-card purchase is counted twice.</strong> It shouldn't be: card purchases count, and the bill payment is tagged <em>Card Payment</em> and left out. If a bill payment shows as spending, open it and set the category to <em>Card Payment</em>.</p>
 <p><strong>The balance on Accounts is wrong.</strong> Tap the account and type today's balance from your bank app; PaiYo follows your transactions from there and tells you when a bank SMS disagrees (which usually means a missed or doubled transaction: check Recent alerts).</p>
 <p><strong>My loan / FD / mutual fund / NPS isn't there.</strong> Banks don't SMS these balances. Add them under <em>Accounts → Add an account</em>, or import a CAS / NPS statement.</p>
@@ -285,12 +277,14 @@
 <p><strong>I pay a bill in cash.</strong> Add the bill unlinked and tap <em>Mark paid</em> each time.</p>
 <p><strong>Nothing updates in the background.</strong> Check <em>Settings → Sync every hour</em> is on, and that Android isn't restricting PaiYo's battery use. SMS are read as they arrive regardless.</p>
 <p><strong>Can I use Yahoo / Outlook mail?</strong> Not yet: email alerts are Gmail-only today. Yahoo and other IMAP mailboxes are planned; Outlook isn't.</p>
-<p><strong>Does PaiYo see my Google password or my whole Drive?</strong> No. Sign in with Google gives it a short-lived token with read-only Gmail and <em>files it created</em> in Drive. You can revoke access any time from your Google account's security page.</p>
+<p><strong>Does PaiYo see my Google password or my whole Drive?</strong> No. For Gmail it uses an app password you create just for PaiYo, never your Google password; delete it at myaccount.google.com/apppasswords to cut access. For Drive, <em>Connect Google Drive</em> gives it access only to <em>files it created</em>; revoke that from your Google account's security page.</p>
+<p><strong>Where did <em>Sign in with Google</em> for Gmail go?</strong> Google now requires every app that reads Gmail through sign-in to pass a paid security assessment every year, even apps like PaiYo that keep everything on the phone. PaiYo uses an app password instead, which Gmail has long supported. If you connected with Sign in with Google before, PaiYo asks you once to reconnect: <em>Settings → Gmail alerts</em>. You can remove the old access at myaccount.google.com/connections.</p>
 <p><strong>I forgot my backup passphrase.</strong> The backup can't be opened; make a new backup with a new passphrase (<em>Change passphrase</em>) while the data is still on the phone.</p>
 <p><strong>Why does the launch screen stay indigo when I change the theme?</strong> Android draws it before the app starts, so it can't follow the theme.</p>
 <p><strong>Screenshots come out black.</strong> App lock is on, which hides PaiYo's screens from screenshots and recent apps. Turn it off briefly to take one.</p>
 <p><strong>Where do I send feedback or a bug?</strong> <em>Settings → About PaiYo → Send feedback</em> (a pre-filled email to app.paiyo@thevoltdesk.in), or email directly. Crashes are reported automatically if <em>Send crash reports</em> is on.</p>
 <p><strong>Is my data gone if I uninstall?</strong> Yes, unless you have a Drive backup or an exported Excel file. Back up first.</p>
+<hr />
 <hr />
 <nav class="dock"><a href="#home">Home</a><a href="#transactions">Transactions</a><a href="#accounts">Accounts</a><a href="#budget">Budget</a><a href="#bills">Bills</a><a href="#summary">Summary</a><a href="#settings">Settings</a><a href="#7-faqs">FAQs</a></nav>
 </main>
